@@ -1,0 +1,35 @@
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.navbar .lgx {
+  height: 25px;
+}
+
+.navbar .nav-links {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links .in-nav-links {
+  column-gap: 4em;
+}
+
+.in-nav-links .nav-link {
+  color: #29526e;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav-links .nav-link-btn {
+  font-size: 15px;
+  color: white;
+  background: #084c78;
+  padding: 0.7em 1.5em;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+}
