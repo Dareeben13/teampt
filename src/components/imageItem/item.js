@@ -7,6 +7,7 @@ import moon from "../../assets/moon.jpg";
 import burger from "../../assets/burger.jpg";
 import "./item.css";
 import { gsap } from "gsap";
+import { Cursor } from "../Cur";
 
 export const ImageItem = ({ image, top, btm }) => {
   return (
@@ -19,7 +20,6 @@ export const ImageItem = ({ image, top, btm }) => {
       </div>
       <div className="xre">
         <div className="image-overlay" />
-        <span className="view-pointer">View</span>
         <div className="hov-img" style={{ backgroundImage: `url(${image})` }} />
       </div>
     </div>
@@ -78,13 +78,13 @@ export const ImageItems = () => {
         paused: true,
         defaults: {
           duration: 1,
-          stagger: { amount: 2 },
+          stagger: { amount: 1 },
           ease: "expo.in",
         },
       })
       .add("in")
       .from(".image-item-wrapper", {
-        height: 100,
+        yPercent: 100,
         transformOrigin: "top",
       })
       .addPause()
