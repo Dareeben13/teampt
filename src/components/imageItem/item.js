@@ -22,7 +22,7 @@ export const ImageItem = ({ image, top, btm, setDetail }) => {
   let g = gsap.timeline();
 
   useEffect(() => {
-    tl.from(boxRef.current, { width: "100px", duration: 1 }, 0.2).to(boxRef.current, { width: "400px", duration: 1 }, 0.2);
+    tl.from(boxRef.current, { width: "100px", duration: 1 }, 0.2).to(boxRef.current, { width: "350px", duration: 1 }, 0.2);
     tl.from(sliceRef.current, { duration: 0 }, 0).to(sliceRef.current, { display: "flex", ease: "Power0.easeNone" }, 0.5);
     tl.to(overlayRef.current, { opacity: "0", duration: 0.1 }, 0.1);
     tl.to(imageRef.current, { duration: 0.5, filter: "grayscale(0)" }, 0);
