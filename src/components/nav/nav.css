@@ -2,6 +2,7 @@
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  z-index: 999;
 }
 
 .navbar .lgx {
@@ -11,6 +12,7 @@
 .navbar .nav-links {
   justify-content: space-between;
   align-items: center;
+  z-index: 999;
 }
 
 .nav-links .in-nav-links {
@@ -32,4 +34,9 @@
   border-radius: 25px;
   cursor: pointer;
   font-weight: 500;
+}
+
+.ytt {
+  column-gap: 1em;
+  align-items: center;
 }

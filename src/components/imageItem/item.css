@@ -4,34 +4,35 @@
   max-width: 600px;
   max-height: 500px;
   height: 330px;
-  width: 500px;
-  /* cursor: none !important; */
+  width: calc(100% / 6);
+  overflow: hidden;
+  position: relative;
 }
 
 .image-item-wrapper:hover .view-pointer {
   /* display: block; */
 }
 
-.image-item-wrapper .image-text-wrap {
+.image-text-wrap {
   background: #084c78;
   padding: 10px 15px;
   position: relative;
   flex: 0.3;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
-  padding-right: 3.5em;
+  padding-right: 4em;
 }
 
-.image-item-wrapper .image-text-wrap .image-text-top {
+.image-text-wrap .image-text-top {
   color: white;
-  font-size: 4.5em;
+  font-size: 3.5em;
   font-weight: 700;
 }
 
-.image-item-wrapper .image-text-wrap .image-text-btm {
+.image-text-wrap .image-text-btm {
   color: white;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 500;
   margin-top: auto;
 }
@@ -43,11 +44,12 @@
 
 .hov-img {
   width: 100%;
+  /* max-width: 300px; */
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: grayscale(100%);
+  filter: grayscale(1);
 }
 .image-overlay {
   position: absolute;
@@ -61,14 +63,64 @@
 }
 
 .view-pointer {
-  /* position: absolute; */
+  position: absolute;
   /* bottom: 40px; */
   color: #29526e;
   background-color: white;
-  /* z-index: 10; */
+  z-index: 10;
   /* left: 50%; */
   font-size: 8px;
   padding: 9px 5px;
   border-radius: 50px;
-  /* display: none; */
+  pointer-events: none;
+  transition: 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
+  user-select: none;
+  display: none;
+}
+
+/*  */
+
+.box {
+  max-width: 600px;
+  max-height: 500px;
+  height: 330px;
+  width: calc(100% / 6);
+  /* background: black; */
+  position: relative;
+  overflow: hidden;
+}
+
+.myimg {
+  height: 100%;
+  width: 100%;
+}
+
+.uncover {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.gradOverlay {
+  position: absolute;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  flex-grow: 1;
+  background: #20587e9c;
+  opacity: 1;
+}
+
+.uncoverSlice {
+  position: absolute;
+  display: flex;
+  z-index: 3;
+  height: 100%;
+  width: 30%;
+  flex-grow: 1;
+  background: black;
 }
